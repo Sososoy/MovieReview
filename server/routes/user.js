@@ -95,7 +95,7 @@ router.post("/find/password", asyncHandler(async (req, res, nex) => {
     //email에 해당하는 사용자 정보를 가져옵니다.
     let user = await User.findOne({ email });
     //email을 전송하는데 사용하게 될 email
-    let myEmail = "dudspsdl123321@gmail.com";
+    let myEmail = "example@gmail.com";
     //nodemailer를 사용하여 메일전송을합니다.
     let transporter = nodeMailer.createTransport({
         service: "gmail",
@@ -104,7 +104,7 @@ router.post("/find/password", asyncHandler(async (req, res, nex) => {
         secure: false,
         auth: {
             user: myEmail,
-            pass: "wsdjonteaayznmkm"
+            pass: "****************"
         }
     });
 
